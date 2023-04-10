@@ -1,18 +1,5 @@
 export const VOTACION_ABI = [
 	{
-		"inputs": [
-			{
-				"internalType": "address",
-				"name": "_address",
-				"type": "address"
-			}
-		],
-		"name": "AutorizarVotante",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
 		"inputs": [],
 		"stateMutability": "nonpayable",
 		"type": "constructor"
@@ -25,7 +12,7 @@ export const VOTACION_ABI = [
 				"type": "bytes32"
 			}
 		],
-		"name": "Votar",
+		"name": "votar",
 		"outputs": [],
 		"stateMutability": "nonpayable",
 		"type": "function"

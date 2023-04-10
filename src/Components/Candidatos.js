@@ -1,17 +1,18 @@
+import candidato1 from "../images/Candidato1.png"
+import candidato2 from "../images/Candidato2.png"
+import candidato3 from "../images/Candidato3.png"
+
 export const Candidatos = [
   {
     nombre: "Juan",
-    imagen:
-      "https://png.pngtree.com/element_our/20190528/ourlarge/pngtree-business-person-in-suit-image_1140238.jpg",
+    imagen: candidato1,
   },
   {
     nombre: "Lucas",
-    imagen:
-      "https://png.pngtree.com/element_our/20190528/ourlarge/pngtree-business-person-in-suit-image_1140241.jpg",
+    imagen: candidato2
   },
   {
     nombre: "Claudia",
-    imagen:
-      "https://png.pngtree.com/png-clipart/20200715/ourlarge/pngtree-women-wearing-suit-illustration-png-image_2307051.jpg",
+    imagen: candidato3
   },
 ];

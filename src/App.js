@@ -11,7 +11,7 @@ function App() {
   const [signerAddress, setSignerAddress] = useState("");
   const [votos, setVotos] = useState({});
   const [addressForm, setAddressForm] = useState("");
-  const AdminWallet = "0x0A9D4ac10D0f6fD3Ff3DF39BA3ba208cB1A30460";
+  const AdminWallet = "0xFc4b802475F911b06Ec791f361A43637bDb190b6";
 
   const toBytes32 = (text) => ethers.utils.formatBytes32String(text);
   // Sacar Comillas al provider, descomentar UseEffect, descomentar OnlyAdmin
@@ -20,7 +20,7 @@ function App() {
   useEffect(() => {
     contractInteraction();
     connect();
-   }, [])
+  }, []);
 
   const connectAccount = async () => {
     await provider.send("eth_requestAccounts", []);
@@ -45,16 +45,17 @@ function App() {
   };
 
   const contractInteraction = () => {
-    const contractAddress = "0x33E2b895CbD98a44266bd039973079328870A721";
+    const contractAddress = "0xa99023b9a3578ceE6e3B008Ea1EDe2c2b1185Ffc";
     setConnectedContract(
       new ethers.Contract(contractAddress, VOTACION_ABI, provider)
     );
+    console.log(connectedContract)
   };
 
   const Votar = async (nombre) => {
     const txn = await connectedContract
       .connect(signer)
-      .Votar(toBytes32(nombre), { gasLimit: 300000 });
+      .votar(toBytes32(nombre), { gasLimit: 300000 });
     console.log(txn);
   };
 
@@ -94,25 +95,27 @@ function App() {
   };
 
   const OnlyAdmin = () => {
-    if(signerAddress === AdminWallet){
-      return true
+    if (signerAddress === AdminWallet) {
+      return true;
     } else {
-      return false
+      return false;
     }
   };
 
   return (
     <div className="mx-auto my-auto h-full w-full">
-      {/* {
-        OnlyAdmin() ?
-        <h1 className=" m-auto justify-center pt-5 text-2xl text-center"> Rol: Administrador </h1> :
-        <h1 className=" m-auto justify-center pt-5 text-2xl text-center"> Rol: Usuario </h1> 
-      } */}
-      <h1 className=" m-auto justify-center pt-1 text-4xl text-center">
-        {" "}
-        Candidates{" "}
+      {OnlyAdmin() ? (
+        <h1 className=" m-auto justify-center pt-5 text-2xl text-center">
+          {" "}
+          Rol: Administrador{" "}
+        </h1>
+      ) : (
+        ""
+      )}
+      <h1 className=" m-auto justify-center mt-10 mb-24 font-bold font-serif text-5xl text-center ">
+        Candidates
       </h1>
-      <div className="flex flex-col md:flex-row">
+      <div className="flex flex-col xl:flex-row">
         {Candidatos &&
           Candidatos.map((c) => (
             <Card
@@ -126,23 +129,8 @@ function App() {
       </div>
       {OnlyAdmin() ? (
         <div>
-          <div className="flex flex-row p-x-10 justify-around">
-            <button
-              onClick={() => AutorizarWallet(addressForm)}
-              className="px-4 py-1 bg-orange-500 hover:bg-orange-600 rounded-lg"
-            >
-              Authorize voter
-            </button>
-            <input
-              placeholder="Address"
-              className=" border border-orange-500 rounded-lg placeholder:text-center text-center w-7/12"
-              type="text"
-              value={addressForm}
-              onChange={(e) => handler(e)}
-            />
-          </div>
           <button
-            className="flex justify-center px-4 py-1 mx-auto mt-5 text-center m-auto bg-orange-500 hover:bg-orange-600 rounded-lg"
+            className="flex px-10 py-2 text-xl m-auto my-8 bg-neutral-400 border-2 border-neutral-600 hover:bg-neutral-600 transition-colors duration-200 hover:text-white rounded-lg"
             onClick={() => VerVotos()}
           >
             {" "}
