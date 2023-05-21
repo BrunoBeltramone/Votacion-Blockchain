@@ -9,8 +9,8 @@ function App() {
   return (
     <div className="h-screen flex flex-col">
       <Routes>
-        <Route path="/Votacion-Blockchain/"  element={<Landing />}/> 
-        <Route path="/Votacion-Blockchain/Home"  element={<Home />}/> 
+        <Route path="/"  element={<Landing />}/> 
+        <Route path="/Home"  element={<Home />}/> 
       </Routes>
       <Footer />
     </div>

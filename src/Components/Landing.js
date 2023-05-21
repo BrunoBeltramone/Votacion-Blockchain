@@ -16,7 +16,7 @@ const Landing = () => {
         no dudes en comunicarte conmigo. Estoy aquí para
         ayudarte a tener la mejor experiencia en mi aplicación.
       </p>
-      <Link to="/Votacion-Blockchain/Home" className="bg-blue-500 mx-auto px-8 py-2 rounded-2xl">
+      <Link to="/Home" className="bg-blue-500 mx-auto px-8 py-2 rounded-2xl">
         Ir a Votar
       </Link>
       <div>
@@ -100,7 +100,7 @@ const Landing = () => {
           solicite
         </p>
       </div>
-      <Link to="/Votacion-Blockchain/Home" className="bg-blue-500 mx-auto px-8 py-2 rounded-2xl">
+      <Link to="/Home" className="bg-blue-500 mx-auto px-8 py-2 rounded-2xl">
         Ir a Votar
       </Link>
     </div>

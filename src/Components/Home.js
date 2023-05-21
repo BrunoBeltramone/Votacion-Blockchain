@@ -129,7 +129,7 @@ function Home() {
           </button>{" "}
         </div>
       ) : (
-        <Link to="/Votacion-Blockchain/" className="bg-neutral-400 border-2 border-neutral-500 hover:bg-neutral-500 transition-colors duration-200 mx-auto px-8 py-2 mt-8 rounded-2xl text-lg" >
+        <Link to="/" className="bg-neutral-400 border-2 border-neutral-500 hover:bg-neutral-500 transition-colors duration-200 mx-auto px-8 py-2 mt-8 rounded-2xl text-lg" >
           Volver a la Configuracion Inicial ⬅
         </Link>
       )}
