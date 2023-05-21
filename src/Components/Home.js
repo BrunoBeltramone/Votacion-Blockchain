@@ -103,8 +103,8 @@ function Home() {
 
   return (
     <div className="flex flex-col justify-center m-auto xl:h-full w-full  font-serif">
-      <h1 className="lg:fixed lg:top-101 w-full lg::left-0 font-bold text-5xl text-center">
-        Candidates
+      <h1 className="lg:fixed lg:top-10 w-full lg::left-0 font-bold text-5xl text-center">
+        Candidatos
       </h1>
       <div className="flex flex-col xl:flex-row mt-10">
         {Candidatos &&
@@ -129,7 +129,7 @@ function Home() {
           </button>{" "}
         </div>
       ) : (
-        <Link to="/" className="bg-neutral-400 border-2 border-neutral-500 hover:bg-neutral-500 transition-colors duration-200 mx-auto px-8 py-2 mt-8 rounded-2xl text-lg" >
+        <Link to="/Votacion-Blockchain/" className="bg-neutral-400 border-2 border-neutral-500 hover:bg-neutral-500 transition-colors duration-200 mx-auto px-8 py-2 mt-8 rounded-2xl text-lg" >
           Volver a la Configuracion Inicial ⬅
         </Link>
       )}

@@ -16,7 +16,7 @@ const Card = ({ nombre, imagen, votar, votos }) => {
           onClick={() => votar(nombre)}
         >
           {" "}
-          Vote {nombre}
+          Votar
         </button>
         {/* Solo Admin */}
         {votos[nombre] != undefined ? (
