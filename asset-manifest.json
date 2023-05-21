@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/BrunoBeltramone.github.io/Votacion-Blockchain/static/css/main.1b4c522d.css",
-    "main.js": "/BrunoBeltramone.github.io/Votacion-Blockchain/static/js/main.7256aa96.js",
-    "static/js/787.e96e60f1.chunk.js": "/BrunoBeltramone.github.io/Votacion-Blockchain/static/js/787.e96e60f1.chunk.js",
-    "static/media/Candidato3.png": "/BrunoBeltramone.github.io/Votacion-Blockchain/static/media/Candidato3.d10ca820bafe27049cc8.png",
-    "static/media/Candidato1.png": "/BrunoBeltramone.github.io/Votacion-Blockchain/static/media/Candidato1.d89d80ec881fb7b1b24b.png",
-    "static/media/Candidato2.png": "/BrunoBeltramone.github.io/Votacion-Blockchain/static/media/Candidato2.5da214980593799d8015.png",
-    "static/media/Logo.png": "/BrunoBeltramone.github.io/Votacion-Blockchain/static/media/Logo.ab99d5f8b002e38dd810.png",
-    "index.html": "/BrunoBeltramone.github.io/Votacion-Blockchain/index.html",
-    "main.1b4c522d.css.map": "/BrunoBeltramone.github.io/Votacion-Blockchain/static/css/main.1b4c522d.css.map",
-    "main.7256aa96.js.map": "/BrunoBeltramone.github.io/Votacion-Blockchain/static/js/main.7256aa96.js.map",
-    "787.e96e60f1.chunk.js.map": "/BrunoBeltramone.github.io/Votacion-Blockchain/static/js/787.e96e60f1.chunk.js.map"
+    "main.css": "/Votacion-Blockchain/static/css/main.1b4c522d.css",
+    "main.js": "/Votacion-Blockchain/static/js/main.59306220.js",
+    "static/js/787.e96e60f1.chunk.js": "/Votacion-Blockchain/static/js/787.e96e60f1.chunk.js",
+    "static/media/Candidato3.png": "/Votacion-Blockchain/static/media/Candidato3.d10ca820bafe27049cc8.png",
+    "static/media/Candidato1.png": "/Votacion-Blockchain/static/media/Candidato1.d89d80ec881fb7b1b24b.png",
+    "static/media/Candidato2.png": "/Votacion-Blockchain/static/media/Candidato2.5da214980593799d8015.png",
+    "static/media/Logo.png": "/Votacion-Blockchain/static/media/Logo.ab99d5f8b002e38dd810.png",
+    "index.html": "/Votacion-Blockchain/index.html",
+    "main.1b4c522d.css.map": "/Votacion-Blockchain/static/css/main.1b4c522d.css.map",
+    "main.59306220.js.map": "/Votacion-Blockchain/static/js/main.59306220.js.map",
+    "787.e96e60f1.chunk.js.map": "/Votacion-Blockchain/static/js/787.e96e60f1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1b4c522d.css",
-    "static/js/main.7256aa96.js"
+    "static/js/main.59306220.js"
   ]
 }
