@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Votacion-Blockchain/static/css/main.f8d1106b.css",
+    "main.js": "/Votacion-Blockchain/static/js/main.f4e21031.js",
+    "static/js/787.e96e60f1.chunk.js": "/Votacion-Blockchain/static/js/787.e96e60f1.chunk.js",
+    "static/media/Candidato1.jpg": "/Votacion-Blockchain/static/media/Candidato1.2e0ea34f32b04fc5a340.jpg",
+    "static/media/Metamask3.png": "/Votacion-Blockchain/static/media/Metamask3.06006e3ef30e2c5bead8.png",
+    "static/media/Candidato2.jpg": "/Votacion-Blockchain/static/media/Candidato2.9c100308a8f859ea2b96.jpg",
+    "static/media/metamask1.png": "/Votacion-Blockchain/static/media/metamask1.d9a5cc2da195548ca7de.png",
+    "static/media/Logo.png": "/Votacion-Blockchain/static/media/Logo.ab99d5f8b002e38dd810.png",
+    "static/media/Candidato3.jpg": "/Votacion-Blockchain/static/media/Candidato3.58b9256632fd6df94ec4.jpg",
+    "static/media/Metamask2.png": "/Votacion-Blockchain/static/media/Metamask2.9746081ec81ba270ef93.png",
+    "index.html": "/Votacion-Blockchain/index.html",
+    "main.f8d1106b.css.map": "/Votacion-Blockchain/static/css/main.f8d1106b.css.map",
+    "main.f4e21031.js.map": "/Votacion-Blockchain/static/js/main.f4e21031.js.map",
+    "787.e96e60f1.chunk.js.map": "/Votacion-Blockchain/static/js/787.e96e60f1.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f8d1106b.css",
+    "static/js/main.f4e21031.js"
+  ]
+}
