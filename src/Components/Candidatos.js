@@ -1,18 +1,24 @@
-import candidato1 from "../assets/images/Candidato1.png"
-import candidato2 from "../assets/images/Candidato2.png"
-import candidato3 from "../assets/images/Candidato3.png"
+import candidato1 from "../assets/images/Candidato1.jpg";
+import candidato2 from "../assets/images/Candidato2.jpg";
+import candidato3 from "../assets/images/Candidato3.jpg";
 
 export const Candidatos = [
   {
     nombre: "Juan",
-    imagen: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cmFuZG9tJTIwcGVvcGxlfGVufDB8fDB8fHww&w=1000&q=80",
-  },
-  {
-    nombre: "Lucas",
-    imagen: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80"
+    imagen: candidato2,
+    biografia:
+      "Juan, de 52 años, es un destacado activista y defensor de los derechos civiles. Con una sólida formación en derecho y una carrera dedicada a la lucha por la igualdad y la justicia social, Juan ha liderado numerosas campañas para promover la inclusión y la diversidad en la sociedad. Su compromiso con las comunidades marginadas y su visión progresista lo convierten en un candidato inspirador y capacitado para representar a todos los ciudadanos.",
   },
   {
     nombre: "Claudia",
-    imagen: "https://images.unsplash.com/photo-1530785602389-07594beb8b73?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80"
+    imagen: candidato3,
+    biografia:
+      "Claudia, de 42 años, es una destacada médica con una larga trayectoria en el servicio público. Reconocida por su compromiso con la salud pública y la atención médica accesible, Laura ha liderado iniciativas para mejorar el sistema de salud y combatir enfermedades. Su experiencia y liderazgo la convierten en una candidata confiable para abordar los desafíos sanitarios y sociales del país.",
+  },
+  {
+    nombre: "Lucas",
+    imagen: candidato1,
+    biografia:
+      "Lucas, de 48 años, es un empresario exitoso con una visión progresista para el desarrollo económico del país. Con experiencia en el sector privado y una sólida comprensión de las necesidades empresariales, Carlos se ha destacado por su enfoque en la innovación y la creación de empleo. Su plataforma se centra en políticas que fomenten el crecimiento sostenible y la inclusión económica.",
   },
 ];

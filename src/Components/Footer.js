@@ -5,7 +5,7 @@ import github from "../assets/icons/linkedin.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-neutral-100 bottom-0 left-0 w-full">
+    <footer className="bg-zinc-800 bottom-0 left-0 w-full text-white">
       <div className="flex justify-center text-center">
         <div className="flex flex-row items-center justify-between md:flex-row">
           {/* Image */}

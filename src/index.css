@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-    background-image: url("https://www.solofondos.com/wp-content/uploads/2015/11/fondo2.jpg");
+    background-color: #222222;
     background-size: cover;
     background-attachment: fixed;
 }

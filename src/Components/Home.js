@@ -1,9 +1,9 @@
 import { Candidatos } from "./Candidatos";
-import Card from "./Card";
 import { ethers } from "ethers";
 import { useEffect, useState } from "react";
 import { VOTACION_ABI } from "../ABI";
 import { Link } from "react-router-dom";
+import { NewCard } from "./NewCard";
 
 function Home() {
   const [connectedContract, setConnectedContract] = useState({});
@@ -22,11 +22,13 @@ function Home() {
     connect();
   }, []);
 
+  //Coneccion a la cuenta de metamask
   const connectAccount = async () => {
     await provider.send("eth_requestAccounts", []);
     return;
   };
 
+  // Sirve para poder firmar una transaccion
   const getSigner = async (provider) => {
     provider.send("eth_requestAccounts", []);
     const signer = provider.getSigner();
@@ -38,12 +40,14 @@ function Home() {
     return signer;
   };
 
+  //Hace la conexion con el SC - necesita del getSigner
   const connect = () => {
     getSigner(provider).then((signer) => {
       setSigner(signer);
     });
   };
 
+  //Permite interactuar con el Contrato
   const contractInteraction = () => {
     const contractAddress = "0xa99023b9a3578ceE6e3B008Ea1EDe2c2b1185Ffc";
     setConnectedContract(
@@ -52,6 +56,7 @@ function Home() {
     console.log(connectedContract);
   };
 
+  // Me conecto directamente a la funcion Votar
   const Votar = async (nombre) => {
     const txn = await connectedContract
       .connect(signer)
@@ -59,28 +64,16 @@ function Home() {
     console.log(txn);
   };
 
-  const AutorizarWallet = async (address) => {
-    connect();
-    const txn = await connectedContract
-      .connect(signer)
-      .AutorizarVotante(address, { gasLimit: 300000 });
-    console.log(txn);
-    setAddressForm("");
-  };
-
-  const handler = (e) => {
-    setAddressForm(e.target.value);
-    console.log(addressForm);
-  };
-
+  // Me conecto directamente a la funcion VerVotoCandidato
   const VerVotoCandidato = async (candidato) => {
     const txn = await connectedContract
       .connect(signer)
-      .VerVotos(toBytes32(candidato), { gasLimit: 300000 });
+      .VerVotos(toBytes32(candidato), { gasLimit: 500000 });
     // console.log(parseInt(txn._hex))
     return parseInt(txn._hex);
   };
 
+  // Hago un llamado a varias funciones para ver el voto de todos
   const VerVotos = async () => {
     var votoJuan = await VerVotoCandidato("Juan");
     var votoLucas = await VerVotoCandidato("Lucas");
@@ -91,8 +84,10 @@ function Home() {
       Lucas: votoLucas,
       Claudia: votoClaudia,
     });
+    console.log(votos)
   };
 
+  // Modificador para que la funcion solo la use el Administrador
   const OnlyAdmin = () => {
     if (signerAddress === AdminWallet) {
       return true;
@@ -103,17 +98,15 @@ function Home() {
 
   return (
     <div className="flex flex-col justify-center m-auto xl:h-full w-full  font-serif">
-      <h1 className="lg:fixed lg:top-10 w-full lg::left-0 font-bold text-5xl text-center">
-        Candidatos
-      </h1>
-      <div className="flex flex-col xl:flex-row mt-10">
+      <div className="flex flex-col xl:flex-row space-y-5 xl:space-y-0 mt-10">
         {Candidatos &&
           Candidatos.map((c) => (
-            <Card
+            <NewCard
               votos={votos}
               votar={Votar}
               nombre={c.nombre}
               imagen={c.imagen}
+              biografia={c.biografia}
               key={c.nombre}
             />
           ))}
@@ -121,7 +114,7 @@ function Home() {
       {OnlyAdmin() ? (
         <div>
           <button
-            className="flex px-10 py-2 text-xl m-auto my-4 bg-neutral-400 border-2 border-neutral-500 hover:bg-neutral-500 transition-colors duration-200 hover:text-white rounded-lg"
+            className="flex px-10 py-2 text-xl m-auto my-4 bg-zinc-00 border-2 border-teal-500 hover:bg-teal-600 transition-colors duration-200 text-white rounded-lg"
             onClick={() => VerVotos()}
           >
             {" "}
@@ -129,7 +122,10 @@ function Home() {
           </button>{" "}
         </div>
       ) : (
-        <Link to="/" className="bg-neutral-400 border-2 border-neutral-500 hover:bg-neutral-500 transition-colors duration-200 mx-auto px-8 py-2 mt-8 rounded-2xl text-lg" >
+        <Link
+          to="/"
+          className="flex px-10 py-2 text-xl m-auto my-7 bg-zinc-00 border-2 border-teal-500 hover:bg-teal-600 transition-colors duration-200 text-white rounded-lg"
+        >
           Volver a la Configuracion Inicial ⬅
         </Link>
       )}
