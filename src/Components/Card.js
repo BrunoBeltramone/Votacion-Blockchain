@@ -9,23 +9,23 @@ const Card = ({ nombre, imagen, votar, votos }) => {
         src={imagen}
         className="flex justify-center bg-white m-auto rounded-lg h-96 w-96 "
       />
-        <h1 className="flex justify-center text-3xl p-3">{nombre}</h1>
-        <button
-          className="flex px-10 py-2 text-xl m-auto my-2 bg-white hover:bg-neutral-600 transition-colors duration-200 hover:text-white rounded-lg"
-          nombre={nombre}
-          onClick={() => votar(nombre)}
-        >
-          {" "}
-          Votar
-        </button>
-        {/* Solo Admin */}
-        {votos[nombre] != undefined ? (
-          <h1 className="flex justify-center text-xl p-3">
-            Votos: {votos[nombre]}
-          </h1>
-        ) : (
-          ""
-        )}
+      <h1 className="flex justify-center text-3xl p-3">{nombre}</h1>
+      <button
+        className="flex px-10 py-2 text-xl m-auto my-2 bg-white hover:bg-neutral-600 transition-colors duration-200 hover:text-white rounded-lg"
+        nombre={nombre}
+        onClick={() => votar(nombre)}
+      >
+        {" "}
+        Votar
+      </button>
+      {/* Solo Admin */}
+      {votos[nombre] != undefined ? (
+        <h1 className="flex justify-center text-xl p-3 ">
+          Votos: {votos[nombre]}
+        </h1>
+      ) : (
+        ""
+      )}
     </div>
   );
 };
